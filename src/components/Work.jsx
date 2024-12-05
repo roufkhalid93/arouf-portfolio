@@ -1,8 +1,8 @@
 import workImg from '../assets/projects/workImg.jpeg'
 import realestate from '../assets/projects/realestate.jpg'
 import carantel from '../assets/projects/carantel.jpg'
-import twitterClone from '../assets/projects/twitterClone.jpg'
 import womanicure from '../assets/projects/womanicure.jpg'
+import twitterClone from '../assets/projects/twitterClone.jpg'
 
 export default function Work() {
     return (
