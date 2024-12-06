@@ -3,43 +3,52 @@ import me from '../assets/me.jpg'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-scroll'
 
 export default function Navbar() {
     const [nav, setNav] = useState(false);
     const openMenu = () => setNav(!nav)
 
+    const navbarRef = useRef(null);
+    const [navbarHeight, setNavbarHeight] = useState(0);
+
+    useEffect(() => {
+        if (navbarRef.current) {
+            setNavbarHeight(navbarRef.current.offsetHeight);
+        }
+    }, []);
+
     return (
-        <div className='fixed w-full h-[-80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-            <div className='w-20 h-20 flex items-center justify-center rounded-full overflow-hidden'>
-                <img className='hover:scale-150 duration-500' src={cattesized} alt='Logo Image' style={{ width: '80px' }} />
+        <div ref={navbarRef}  className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+            <div className='w-20 h-auto flex items-center justify-center rounded-full overflow-hidden'>
+                <img className='hover:scale-150 duration-500' src={cattesized} alt='Logo Image' style={{ width: '60px' }} />
             </div>
 
             {/* menu */}
             <ul className='hidden md:flex'>
                 <li>
-                    <Link to='home' smooth={true} duration={500}>
+                    <Link to='home' smooth={true} duration={500} offset={-navbarHeight}>
                         Home
                     </Link>
                 </li>
                 <li>
-                    <Link to='about' smooth={true} duration={500}>
+                    <Link to='about' smooth={true} duration={500} offset={-navbarHeight}>
                         About
                     </Link>
                 </li>
                 <li>
-                    <Link to='skills' smooth={true} duration={500}>
+                    <Link to='skills' smooth={true} duration={500} offset={-navbarHeight}>
                         Skills
                     </Link>
                 </li>
                 <li>
-                    <Link to='work' smooth={true} duration={500}>
+                    <Link to='work' smooth={true} duration={500} offset={-navbarHeight}>
                         Work
                     </Link>
                 </li>
                 <li>
-                    <Link to='contact' smooth={true} duration={500}>
+                    <Link to='contact' smooth={true} duration={500} offset={-navbarHeight}>
                         Contact
                     </Link>
                 </li>
@@ -53,27 +62,27 @@ export default function Navbar() {
             {/* mobile menu */}
             <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
                 <li className='py-6 text-4xl'>
-                    <Link onClick={openMenu} to='home' smooth={true} duration={500}>
+                    <Link onClick={openMenu} to='home' smooth={true} duration={500} offset={-navbarHeight}>
                         Home
                     </Link>
                 </li>
                 <li className='py-6 text-4xl'>
-                    <Link onClick={openMenu} to='about' smooth={true} duration={500}>
+                    <Link onClick={openMenu} to='about' smooth={true} duration={500} offset={-navbarHeight}>
                         About
                     </Link>
                 </li>
                 <li className='py-6 text-4xl'>
-                    <Link onClick={openMenu} to='skills' smooth={true} duration={500}>
+                    <Link onClick={openMenu} to='skills' smooth={true} duration={500} offset={-120}>
                         Skills
                     </Link>
                 </li>
                 <li className='py-6 text-4xl'>
-                    <Link onClick={openMenu} to='work' smooth={true} duration={500}>
+                    <Link onClick={openMenu} to='work' smooth={true} duration={500} offset={-navbarHeight}>
                         Work
                     </Link>
                 </li>
                 <li className='py-6 text-4xl'>
-                    <Link onClick={openMenu} to='contact' smooth={true} duration={500}>
+                    <Link onClick={openMenu} to='contact' smooth={true} duration={500} offset={-navbarHeight}>
                         Contact
                     </Link>
                 </li>

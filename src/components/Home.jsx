@@ -15,7 +15,7 @@ export default function Home() {
     }
 
     return (
-        <div name='home' className='w-full h-screen bg-[#0a192f]'>
+        <div name='home' className='w-full h-screen bg-[#0a192f] pt-[80px]'>
             <div className='max-w-[1000px] mx-auto px-8 grid grid-cols-1 md:grid-cols-3 items-center h-full'>
                 {/* container  */}
                 <div className='md:col-span-2 flex flex-col justify-center'>
