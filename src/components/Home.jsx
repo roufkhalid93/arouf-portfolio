@@ -6,8 +6,12 @@ import { useState } from 'react'
 
 export default function Home() {
     const showWork = () => {
-        document.getElementById('work').scrollIntoView({ behavior: 'smooth' })
-    }
+        const workSection = document.getElementById('work');
+        const yOffset = -80;
+        const y = workSection.getBoundingClientRect().top + window.scrollY + yOffset;
+    
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    };
 
     const [mainImage, setMainImage] = useState(me)
     const toggleImage = () => {
