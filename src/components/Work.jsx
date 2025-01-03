@@ -3,6 +3,7 @@ import realestate from '../assets/projects/realestate.jpg'
 import carantel from '../assets/projects/carantel.jpg'
 import womanicure from '../assets/projects/womanicure.jpg'
 import twitterClone from '../assets/projects/twitterClone.jpg'
+import bodyBoost from '../assets/projects/bodyBoost.jpg'
 
 export default function Work() {
     return (
@@ -78,7 +79,7 @@ export default function Work() {
                     </div>
 
                     <div
-                        style={{ backgroundImage: `url(${womanicure})` }}
+                        style={{ backgroundImage: `url(${bodyBoost})` }}
                         className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
                     >
                         {/* Hover Effects */}
