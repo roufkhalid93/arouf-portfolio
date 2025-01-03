@@ -84,6 +84,33 @@ export default function Work() {
                         {/* Hover Effects */}
                         <div className='opacity-0 group-hover:opacity-100'>
                             <span className='text-2xl font-bold text-white tracking-wider flex justify-center'>
+                                Fitness App
+                            </span>
+                            <p className='text-2xl font-bold text-pink-300 flex justify-center'>
+                                (Body Boost)
+                            </p>
+                            <div className='pt-8 text-center'>
+                                {/* <a href=''>
+                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                                        Demo
+                                    </button>
+                                </a> */}
+                                <a href='https://github.com/roufkhalid93/MERN-body-boost'>
+                                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                                        Code
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style={{ backgroundImage: `url(${womanicure})` }}
+                        className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+                    >
+                        {/* Hover Effects */}
+                        <div className='opacity-0 group-hover:opacity-100'>
+                            <span className='text-2xl font-bold text-white tracking-wider flex justify-center'>
                                 Salon App
                             </span>
                             <p className='text-2xl font-bold text-yellow-200 flex justify-center'>
