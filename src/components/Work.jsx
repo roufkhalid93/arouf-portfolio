@@ -105,11 +105,10 @@ export default function Work() {
                         </div>
                     </div>
 
-                    <div
+                    {/* <div
                         style={{ backgroundImage: `url(${womanicure})` }}
                         className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
                     >
-                        {/* Hover Effects */}
                         <div className='opacity-0 group-hover:opacity-100'>
                             <span className='text-2xl font-bold text-white tracking-wider flex justify-center'>
                                 Salon App
@@ -130,7 +129,7 @@ export default function Work() {
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* <div
                         style={{ backgroundImage: `url(${workImg})` }}
